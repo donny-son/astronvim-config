@@ -51,7 +51,8 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      "pyright"
+      "pyright",
+      "tsserver",
     },
   },
   -- Configure require("lazy").setup() options
