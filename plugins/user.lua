@@ -50,4 +50,9 @@ return {
       vim.keymap.set("n", "<leader>md", "<cmd>MarkdownPreviewToggle<cr>");
     end
   },
+  {
+    "michaelb/sniprun",
+    event = "User AstroFile",
+    build = "bash install.sh",
+  }
 }
