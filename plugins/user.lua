@@ -25,7 +25,9 @@ return {
   },
   {
     "iamcco/markdown-preview.nvim",
-    build = "cd app && yarn install",
+    ft = "markdown",
+    cmd = { "MarkdownPreview", "MarkdownPreviewStop" },
+    build = function() vim.fn["mkdp#util#install"]() end,
     event = "User AstroFile",
     config = function()
       vim.g.mkdp_filetypes = { "markdown" };
